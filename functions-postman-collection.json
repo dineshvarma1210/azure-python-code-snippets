@@ -1,0 +1,412 @@
+{
+	"info": {
+		"_postman_id": "6a03815d-b4b3-4d42-a553-127db678abb2",
+		"name": "Azure Functions Demos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33484522",
+		"_collection_link": "https://www.postman.com/rbbfcd/workspace/demos/collection/16676045-6a03815d-b4b3-4d42-a553-127db678abb2?action=share&source=collection_link&creator=33484522"
+	},
+	"item": [
+		{
+			"name": "Http",
+			"item": [
+				{
+					"name": "GreetingsGet",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7071/api/greetings?name=John",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7071",
+							"path": [
+								"api",
+								"greetings"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "John"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GreetingsPost",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"John\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7071/api/greetings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7071",
+							"path": [
+								"api",
+								"greetings"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Blobs",
+			"item": [
+				{
+					"name": "BlobPub",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"John\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7071/api/blob/publish",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7071",
+							"path": [
+								"api",
+								"blob",
+								"publish"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ServiceBusQueue",
+			"item": [
+				{
+					"name": "QueuePub",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"John\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7071/api/queue/publish?count=100",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7071",
+							"path": [
+								"api",
+								"queue",
+								"publish"
+							],
+							"query": [
+								{
+									"key": "count",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ServiceBusTopic",
+			"item": [
+				{
+					"name": "TopicPub",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"John\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7071/api/topics/publish",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7071",
+							"path": [
+								"api",
+								"topics",
+								"publish"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "StorageQueue",
+			"item": [
+				{
+					"name": "StorageQueuePub",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"John\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7071/api/sa-queue/publish",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7071",
+							"path": [
+								"api",
+								"sa-queue",
+								"publish"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "StorageTable",
+			"item": [
+				{
+					"name": "TablePost",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"model\": \"T1000\",\r\n    \"price\": 99999.99\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7071/api/storage-table",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7071",
+							"path": [
+								"api",
+								"storage-table"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TableList",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7071/api/storage-table",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7071",
+							"path": [
+								"api",
+								"storage-table"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TableGet",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7071/api/storage-table/560881f2-4224-4ed1-8710-0d3bc6f2fbbc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7071",
+							"path": [
+								"api",
+								"storage-table",
+								"560881f2-4224-4ed1-8710-0d3bc6f2fbbc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TablePut",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"model\": \"XXXXXX\",\r\n    \"price\": 99999.99\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:7071/api/storage-table/085f11b2-1c2c-4f07-beea-dfdbd5a4a812",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7071",
+							"path": [
+								"api",
+								"storage-table",
+								"085f11b2-1c2c-4f07-beea-dfdbd5a4a812"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "TableDelete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7071/api/storage-table/560881f2-4224-4ed1-8710-0d3bc6f2fbbc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7071",
+							"path": [
+								"api",
+								"storage-table",
+								"560881f2-4224-4ed1-8710-0d3bc6f2fbbc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orchestrators",
+			"item": [
+				{
+					"name": "Start",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7071/api/orchestrator",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7071",
+							"path": [
+								"api",
+								"orchestrator"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7071/api/orchestrator/{instanceId}/status",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7071",
+							"path": [
+								"api",
+								"orchestrator",
+								"{instanceId}",
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ouput",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7071/api/orchestrator/{instanceId}/output",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7071",
+							"path": [
+								"api",
+								"orchestrator",
+								"{instanceId}",
+								"output"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
